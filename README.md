@@ -1,8 +1,8 @@
-# reflectje
+# 🎩 reflectje
 A platform for doing reflection during studying psychology
 
 
-# how is it going to work
+# 👍 how is it going to work
 As a student you suppose to do Reflection. 
 
 Reflection — writing down your life events, thoughts and emotions. 
@@ -19,13 +19,13 @@ We are going to store very sensitive private data, so we have to think about enc
 This project could be a good place to investigate and implement GDPR things.
 
 
-# tech overview
+# 👨🏻‍💻 tech overview
 Structurally project will be separated to API and Frontend. My intention, as a backend guy, is to implement CQRS, so the frontend will be kept as simple as possible. 
 
 The project will have a lot of business logic, which must be covered by tests. In this case Acceptance tests are needed, and for implementing them I've chosen Behat. ATDD must be the way to go. 
 
 
-# technologies
+# 🎛 technologies
 - CQRS + DDD
 - Symfony Flex
 - http://getprooph.org
