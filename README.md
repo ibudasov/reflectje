@@ -3,10 +3,9 @@ A platform for doing reflection during studying psychology
 
 
 # how is it going to work
-
 As a student you suppose to do Reflection. 
 
-Reflection is writing down your life events, thoughts and emotions. 
+Reflection — writing down your life events, thoughts and emotions. 
 
 According to you therepist, a lot of other things can be reflected: dreams, jokes, neurotic reactions, etc.
 So, we want to have the platfor as flexible as possible. That is why the current set of technologies has been picked. 
@@ -18,6 +17,13 @@ Once records have been added, they suppose to be seen on private page, which is 
 We are going to store very sensitive private data, so we have to think about encryption or other measures of guarding privacy.
 
 This project could be a good place to investigate and implement GDPR things.
+
+
+# tech overview
+Structurally project will be separated to API and Frontend. My intention, as a backend guy, is to implement CQRS, so the frontend will be kept as simple as possible. 
+
+The project will have a lot of business logic, which must be covered by tests. In this case Acceptance tests are needed, and for implementing them I've chosen Behat. ATDD must be the way to go. 
+
 
 # technologies
 - CQRS + DDD
