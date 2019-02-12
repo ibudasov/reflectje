@@ -11,8 +11,11 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 @RequestMapping(path = "/", produces = APPLICATION_JSON_UTF8_VALUE)
 public class DefaultController {
 
-    @GetMapping("/")
+    @GetMapping(path = "/")
     public DefaultResponse rootPage() {
-        return new DefaultResponse("Hoi alemaal!");
+
+        DefaultResponse defaultResponse = new DefaultResponse();
+
+        return defaultResponse.setGreeting("Hoi alemaal!");
     }
 }
