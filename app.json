@@ -1,0 +1,10 @@
+{
+  "environments": {
+    "production": {
+      "scripts": {
+        "test-setup": "mvn clean; mvn validate; mvn compile;",
+        "test": "mvn test"
+      }
+    }
+  }
+}
