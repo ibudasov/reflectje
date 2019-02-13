@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/9cf024851c39d04b9660/maintainability)](https://codeclimate.com/github/ibudasov/reflectje/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/9cf024851c39d04b9660/test_coverage)](https://codeclimate.com/github/ibudasov/reflectje/test_coverage)
+
 # 🎩 Reflectje → [try it!]
 A platform for doing reflection during studying psychology
 
