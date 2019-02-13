@@ -1,8 +1,8 @@
 package com.ibudasov.reflectje.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibudasov.reflectje.infrastructure.controller.DefaultController;
-import com.ibudasov.reflectje.application.response.DefaultResponse;
+import com.ibudasov.reflectje.infrastructure.controller.RootPageController;
+import com.ibudasov.reflectje.application.response.RootPageResponse;
 import com.ibudasov.reflectje.unit.TestConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(DefaultController.class)
+@WebMvcTest(RootPageController.class)
 @Import(TestConfig.class)
 public class RootPageIntegrationTest {
 
@@ -35,10 +35,10 @@ public class RootPageIntegrationTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
-        DefaultResponse response = new ObjectMapper()
+        RootPageResponse response = new ObjectMapper()
                 .readValue(
                         result.getResponse().getContentAsString(),
-                        DefaultResponse.class
+                        RootPageResponse.class
                 );
 
         assertThat(response.getGreeting()).isEqualTo("Hoi alemaal!");

@@ -1,6 +1,6 @@
 package com.ibudasov.reflectje.application.response;
 
-public class DefaultResponse {
+public class RootPageResponse {
 
     private String greeting;
 
@@ -8,7 +8,7 @@ public class DefaultResponse {
         return greeting;
     }
 
-    public DefaultResponse setGreeting(String greeting) {
+    public RootPageResponse setGreeting(String greeting) {
         this.greeting = greeting;
         return this;
     }
