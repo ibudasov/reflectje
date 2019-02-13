@@ -3,10 +3,12 @@ package com.ibudasov.reflectje.integration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibudasov.reflectje.infrastructure.controller.DefaultController;
 import com.ibudasov.reflectje.application.response.DefaultResponse;
+import com.ibudasov.reflectje.unit.TestConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -17,6 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(DefaultController.class)
+@Import(TestConfig.class)
 public class RootPageIntegrationTest {
 
     @Autowired
