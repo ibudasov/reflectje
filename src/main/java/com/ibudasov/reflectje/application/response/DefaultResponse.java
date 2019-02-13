@@ -1,4 +1,4 @@
-package com.ibudasov.reflectje.web.response;
+package com.ibudasov.reflectje.application.response;
 
 public class DefaultResponse {
 

@@ -1,8 +1,8 @@
 package com.ibudasov.reflectje.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibudasov.reflectje.web.controller.DefaultController;
-import com.ibudasov.reflectje.web.response.DefaultResponse;
+import com.ibudasov.reflectje.infrastructure.controller.DefaultController;
+import com.ibudasov.reflectje.application.response.DefaultResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.ibudasov.reflectje.web.controller;
+package com.ibudasov.reflectje.infrastructure.controller;
 
-import com.ibudasov.reflectje.web.response.DefaultResponse;
+import com.ibudasov.reflectje.application.response.DefaultResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
