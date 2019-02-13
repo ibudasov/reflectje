@@ -1,4 +1,4 @@
-# 🎩 reflectje
+# 🎩 Reflectje → [try it!]
 A platform for doing reflection during studying psychology
 
 
@@ -18,7 +18,7 @@ We are going to store very sensitive private data, so we have to think about enc
 
 This project could be a good place to investigate and implement GDPR things.
 
-# 🍿 We also would like to make some analysis
+# 🍿 we also would like to make some analysis
 Everyday day the student writes down the reflection and choose appropriate emotions. At the end of week Reflectje summarize given emotions and say how good is the emotional state of the student. 
 If it is good – Reflectje shows the  results «Keep it up», if it is bad – «You should work better» and indicate the days which led to bad emotions
 
@@ -29,9 +29,13 @@ Structurally project will be separated to API and Frontend. My intention, as a b
 The project will have a lot of business logic, which must be covered by tests. In this case Acceptance tests are needed, and for implementing them I've chosen Behat. ATDD must be the way to go. 
 
 
-# ⚙️ technologies
-- CQRS + DDD
-- Symfony Flex
-- http://getprooph.org
-- Mockery
-- Behat
+# ⚙ technologies
+- Java
+- Spring
+- Spring Boot
+- Maven
+- JUnit
+
+
+
+[try it!]: https://reflectje.herokuapp.com
