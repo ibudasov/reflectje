@@ -8,8 +8,8 @@ import com.ibudasov.reflectje.service.ReflectjeService;
 @Configuration
 public class TestConfig {
 
-    @Bean
-    public ReflectjeService getReflectjeService() {
-        return new ReflectjeService();
-    }
+//    @Bean
+//    public ReflectjeService getReflectjeService() {
+//        return new ReflectjeService();
+//    }
 }
