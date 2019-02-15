@@ -51,6 +51,23 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>2.0.7</version>
 			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.4.5</version>
+				<configuration>
+					<mutationThreshold>100</mutationThreshold>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pit-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>mutationCoverage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
