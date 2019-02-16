@@ -15,7 +15,7 @@ So, we want to have the platform as flexible as possible. That is why the curren
 
 Every day the student suppose to enter reflection records. There can be more than one record a day. Preferrably, more. 
 
-Once records have been added, they suppose to be seen on private page, which is accessible by the student and by the therapist. 
+Once records have been added, they suppose to be shown on private page, which is accessible by the student and by the therapist. 
 
 We are going to store very sensitive private data, so we have to think about encryption or other measures of guarding privacy.
 
@@ -27,9 +27,9 @@ If it is good – Reflectje shows the  results «Keep it up», if it is bad – 
 
 
 # 💻 tech overview
-Structurally project will be separated to API and Frontend. My intention, as a backend guy, is to implement CQRS, so the frontend will be kept as simple as possible. 
-
-The project will have a lot of business logic, which must be covered by tests. In this case Acceptance tests are needed, and for implementing them I've chosen Behat. ATDD must be the way to go. 
+Structurally project will be separated to API and Frontend.
+This repository is responsible only about the API part, Frontend part is coming.  
+To improve code segregation CQRS will be used.
 
 
 # ⚙ technologies
@@ -38,6 +38,8 @@ The project will have a lot of business logic, which must be covered by tests. I
 - Spring Boot
 - Maven
 - JUnit
+- AssertJ
+- Pitest
 
 
 
