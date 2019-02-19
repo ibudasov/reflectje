@@ -36,10 +36,11 @@ To improve code segregation CQRS will be used.
 - Java
 - Spring
 - Spring Boot
-- Maven
-- JUnit
-- AssertJ
-- Pitest
+- Maven — build tool
+- JUnit — for testing in general
+- AssertJ — for nice readable assertions
+- Pitest — for mutation testing
+- Jacoco — for test coverage reports 
 
 
 
