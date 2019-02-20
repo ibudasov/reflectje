@@ -2,7 +2,7 @@ package com.ibudasov.reflectje.domain;
 
 import java.time.LocalDate;
 
-public class Record {
+public class ReflectionRecord {
 
     private LocalDate date;
 
@@ -12,7 +12,7 @@ public class Record {
 
     private Emotion emotion;
 
-    public Record(Fact fact, Thought thought, Emotion emotion) {
+    public ReflectionRecord(Fact fact, Thought thought, Emotion emotion) {
         this.fact = fact;
         this.thought = thought;
         this.emotion = emotion;
@@ -20,8 +20,8 @@ public class Record {
         this.date = LocalDate.now();
     }
 
-    public static Record createFromStrings(String fact, String thought, String emotion) {
-        return new Record(new Fact(fact), new Thought(thought), new Emotion(emotion));
+    public static ReflectionRecord createFromStrings(String fact, String thought, String emotion) {
+        return new ReflectionRecord(new Fact(fact), new Thought(thought), new Emotion(emotion));
     }
 
     public LocalDate getDate() {

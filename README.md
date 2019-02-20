@@ -13,7 +13,7 @@ Reflection — writing down your life events, thoughts and emotions.
 According to you therapist, a lot of other things can be reflected: dreams, jokes, neurotic reactions, etc.
 So, we want to have the platform as flexible as possible. That is why the current set of technologies has been picked. 
 
-Every day the student suppose to enter reflection records. There can be more than one record a day. Preferrably, more. 
+Every day the student suppose to enter reflection records. There can be more than one reflectionRecord a day. Preferrably, more. 
 
 Once records have been added, they suppose to be shown on private page, which is accessible by the student and by the therapist. 
 
