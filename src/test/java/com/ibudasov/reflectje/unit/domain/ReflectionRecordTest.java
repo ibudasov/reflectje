@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ReflectionRecordTest {
 
     @Test
-    public void whenTryingToCreateRecordFromStrings_themRecordIsCreated() {
+    public void whenTryingToCreateReflectionRecord_themRecordIsCreated() {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDate expectedDate = LocalDate.now();
 
