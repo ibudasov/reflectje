@@ -1,9 +1,9 @@
 package com.ibudasov.reflectje.domain;
 
-public class Thought {
+public class Thought implements ExperienceScope {
     private String description;
 
-    public Thought(String description) {
+    Thought(String description) {
         this.description = description;
     }
 
