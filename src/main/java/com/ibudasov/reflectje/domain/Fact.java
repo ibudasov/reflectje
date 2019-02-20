@@ -1,10 +1,10 @@
 package com.ibudasov.reflectje.domain;
 
-public class Fact implements ExperienceScope {
+public class Fact implements Experience {
 
     private String description;
 
-    Fact(String description) {
+    public Fact(String description) {
         this.description = description;
     }
 

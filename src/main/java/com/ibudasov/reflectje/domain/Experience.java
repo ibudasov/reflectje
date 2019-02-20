@@ -1,5 +1,5 @@
 package com.ibudasov.reflectje.domain;
 
-public interface ExperienceScope {
+public interface Experience {
     String getDescription();
 }
