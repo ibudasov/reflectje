@@ -59,26 +59,6 @@
                 <version>2.0.7</version>
             </plugin>
             <plugin>
-                <groupId>org.pitest</groupId>
-                <artifactId>pitest-maven</artifactId>
-                <version>1.4.5</version>
-                <configuration>
-                    <mutationThreshold>100</mutationThreshold>
-                    <excludedClasses>
-                        <param>com.ibudasov.reflectje.SwaggerConfig</param>
-                    </excludedClasses>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>pit-report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>mutationCoverage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.4.201502262128</version>
@@ -120,6 +100,26 @@
                                 </rule>
                             </rules>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.4.5</version>
+                <configuration>
+                    <mutationThreshold>100</mutationThreshold>
+                    <excludedClasses>
+                        <param>com.ibudasov.reflectje.SwaggerConfig</param>
+                    </excludedClasses>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>pit-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>mutationCoverage</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
