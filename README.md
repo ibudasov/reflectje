@@ -31,6 +31,8 @@ Structurally project will be separated to API and Frontend.
 This repository is responsible only about the API part, Frontend part is coming.  
 To improve code segregation CQRS will be used.
 
+# API reference
+Swagger file is here: https://reflectje.herokuapp.com/v2/api-docs
 
 # ⚙ technologies
 - Java
@@ -40,7 +42,8 @@ To improve code segregation CQRS will be used.
 - JUnit — for testing in general
 - AssertJ — for nice readable assertions
 - Pitest — for mutation testing
-- Jacoco — for test coverage reports 
+- Jacoco — for test coverage reports
+- Swagger 
 
 
 
