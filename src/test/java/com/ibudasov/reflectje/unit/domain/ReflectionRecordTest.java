@@ -11,6 +11,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ReflectionRecordTest {
 
+    /**
+     * todo: unit tests should test tiniest methods.
+     * test add,
+     * test new,
+     * test ...
+     * Use more mocks. Everything except SUT should be a mock
+     * If it's done like this - you're running the app, but not doing testing test.
+     */
+
     @Test
     public void whenTryingToCreateReflectionRecord_themRecordIsCreated() {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd");
@@ -38,6 +47,7 @@ public class ReflectionRecordTest {
         assertThat(reflectionRecord.getExperiences().contains(thought)).isTrue();
         assertThat(reflectionRecord.getExperiences().contains(emotion)).isTrue();
 
+        // todo: separate this
         for (Experience experience : reflectionRecord.getExperiences()) {
             if (experience instanceof Fact) {
                 assertThat(experience.getDescription()).isEqualTo(factDescription);
