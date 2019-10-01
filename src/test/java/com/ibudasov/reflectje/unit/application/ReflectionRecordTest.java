@@ -1,6 +1,10 @@
-package com.ibudasov.reflectje.unit.domain;
+package com.ibudasov.reflectje.unit.application;
 
-import com.ibudasov.reflectje.domain.*;
+import com.ibudasov.reflectje.application.ReflectionRecord;
+import com.ibudasov.reflectje.domain.Emotion;
+import com.ibudasov.reflectje.domain.Experience;
+import com.ibudasov.reflectje.domain.Fact;
+import com.ibudasov.reflectje.domain.Thought;
 import org.junit.Test;
 
 import java.time.LocalDate;

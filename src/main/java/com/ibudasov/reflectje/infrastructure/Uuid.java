@@ -8,15 +8,19 @@ public class Uuid implements Id {
 
     private String id;
 
-    private Uuid(String id) {
+    public Uuid() {
+        this.id = this.generate().toString();
+    }
+
+    public Uuid(String id) {
         this.id = id;
     }
 
-    public static Id generate() {
+    public Id generate() {
         return createFrom(UUID.randomUUID().toString());
     }
 
-    public static Id createFrom(String someValue) {
+    public Id createFrom(String someValue) {
         return new Uuid(someValue);
     }
 

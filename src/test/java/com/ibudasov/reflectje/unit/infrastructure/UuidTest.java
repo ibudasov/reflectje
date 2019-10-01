@@ -10,13 +10,13 @@ public class UuidTest {
 
     @Test
     public void whenGeneratingUuidFromString_thenUuidCreated_andValueEqualsExpected() {
-        Id uuid = Uuid.createFrom("expected-value");
+        Id uuid = new Uuid("expected-value");
         assertThat(uuid.toString().contains("expected-value")).isTrue();
     }
 
     @Test
     public void whenGeneratingUuid_thenUuidCreated_andValueIsSomeSting() {
-        Id uuid = Uuid.generate();
+        Id uuid = (new Uuid()).generate();
         assertThat(uuid.toString().isEmpty()).isFalse();
     }
 
