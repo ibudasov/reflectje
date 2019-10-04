@@ -5,6 +5,7 @@ import com.ibudasov.reflectje.domain.Emotion;
 import com.ibudasov.reflectje.domain.Experience;
 import com.ibudasov.reflectje.domain.Fact;
 import com.ibudasov.reflectje.domain.Thought;
+import com.ibudasov.reflectje.infrastructure.Uuid;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -25,7 +26,7 @@ public class ReflectionRecordTest {
      */
 
     @Test
-    public void whenTryingToCreateReflectionRecord_themRecordIsCreated() {
+    public void whenTryingToCreateReflectionRecord_thenRecordIsCreated() {
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDate expectedDate = LocalDate.now();
 
@@ -43,7 +44,7 @@ public class ReflectionRecordTest {
         Emotion emotion = new Emotion(emotionDescription);
         experiences.add(emotion);
 
-        ReflectionRecord reflectionRecord = new ReflectionRecord(experiences);
+        ReflectionRecord reflectionRecord = new ReflectionRecord(new Uuid(), experiences);
 
         assertThat(reflectionRecord.getExperiences()).isEqualTo(experiences);
 
