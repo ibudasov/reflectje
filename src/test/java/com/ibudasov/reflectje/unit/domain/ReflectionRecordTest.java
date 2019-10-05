@@ -1,10 +1,6 @@
-package com.ibudasov.reflectje.unit.application;
+package com.ibudasov.reflectje.unit.domain;
 
-import com.ibudasov.reflectje.application.ReflectionRecord;
-import com.ibudasov.reflectje.domain.Emotion;
-import com.ibudasov.reflectje.domain.Experience;
-import com.ibudasov.reflectje.domain.Fact;
-import com.ibudasov.reflectje.domain.Thought;
+import com.ibudasov.reflectje.domain.*;
 import com.ibudasov.reflectje.infrastructure.Uuid;
 import org.junit.Test;
 
@@ -51,6 +47,7 @@ public class ReflectionRecordTest {
         assertThat(reflectionRecord.getExperiences().contains(fact)).isTrue();
         assertThat(reflectionRecord.getExperiences().contains(thought)).isTrue();
         assertThat(reflectionRecord.getExperiences().contains(emotion)).isTrue();
+        assertThat(reflectionRecord.getId().toString().isEmpty()).isFalse();
 
         // todo: separate this
         for (Experience experience : reflectionRecord.getExperiences()) {

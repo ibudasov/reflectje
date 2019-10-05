@@ -1,7 +1,4 @@
-package com.ibudasov.reflectje.application;
-
-import com.ibudasov.reflectje.domain.Experience;
-import com.ibudasov.reflectje.domain.Id;
+package com.ibudasov.reflectje.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,5 +23,9 @@ public class ReflectionRecord {
 
     public LocalDate getDate() {
         return date;
+    }
+
+    public Id getId() {
+        return id;
     }
 }
