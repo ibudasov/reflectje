@@ -6,7 +6,7 @@
 A platform for doing reflection during studying psychology
 
 
-# 👍 how is it going to work
+# 👍 How is it going to work
 As a student you suppose to do Reflection. 
 
 Reflection — writing down your life events, thoughts and emotions. 
@@ -22,12 +22,12 @@ We are going to store very sensitive private data, so we have to think about enc
 
 This project could be a good place to investigate and implement GDPR things.
 
-# 🍿 we also would like to make some analysis
+# 🍿 We also would like to make some analysis
 Everyday day the student writes down the reflection and choose appropriate emotions. At the end of week Reflectje summarize given emotions and say how good is the emotional state of the student. 
 If it is good – Reflectje shows the  results «Keep it up», if it is bad – «You should work better» and indicate the days which led to bad emotions
 
 
-# 💻 tech overview
+# 💻 Tech overview
 Structurally project will be separated to API and Frontend.
 This repository is responsible only about the API part, Frontend part is coming.  
 To improve code segregation CQRS will be used.
@@ -35,7 +35,7 @@ To improve code segregation CQRS will be used.
 # API reference
 Swagger file is here: https://reflectje.herokuapp.com/v2/api-docs
 
-# ⚙ technologies
+# ⚙ Technologies
 - Java
 - Spring
 - Spring Boot
