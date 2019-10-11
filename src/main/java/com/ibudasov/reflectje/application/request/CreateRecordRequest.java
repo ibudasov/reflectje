@@ -1,9 +1,15 @@
 package com.ibudasov.reflectje.application.request;
 
-public class CreateRecordRequest {
-    private String testInput;
+import java.util.List;
 
-    public String getTestInput() {
-        return testInput;
+public class CreateRecordRequest {
+    private List<Experience> experiences;
+
+    public List<Experience> getExperiences() {
+        return experiences;
+    }
+
+    public void setExperiences(List<Experience> experiences) {
+        this.experiences = experiences;
     }
 }

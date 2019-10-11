@@ -1,6 +1,7 @@
 package com.ibudasov.reflectje.infrastructure.controller;
 
 import com.ibudasov.reflectje.application.request.CreateRecordRequest;
+import com.ibudasov.reflectje.application.request.Experience;
 import com.ibudasov.reflectje.application.response.CreateRecordResponse;
 import com.ibudasov.reflectje.infrastructure.Uuid;
 import org.springframework.http.HttpStatus;
@@ -16,15 +17,17 @@ public class RecordController {
     @ResponseStatus(value = HttpStatus.OK)
     public CreateRecordResponse createRecord(@RequestBody CreateRecordRequest request) {
 
-        // parse it as a key-val
-        // Uppercase key
-        // try to instantiate Experience related to the key
-        // if doesn't work - throw
-        // if works -- add to accumulator hashmap
-        // return it
+        StringBuilder response = new StringBuilder();
+        response.append("|");
+        for (Experience experience : request.getExperiences()) {
+            response
+                    .append(experience.getType())
+                    .append('|')
+            ;
+        }
 
         CreateRecordResponse createRecordResponse = new CreateRecordResponse();
 
-        return createRecordResponse.setCreatedRecordId(new Uuid(request.getTestInput()));
+        return createRecordResponse.setCreatedRecordId(new Uuid(response.toString()));
     }
 }

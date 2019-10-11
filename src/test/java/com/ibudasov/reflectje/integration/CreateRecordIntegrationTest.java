@@ -32,7 +32,11 @@ public class CreateRecordIntegrationTest {
                 .perform(
                         post("/record/")
                                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
-                                .content("{ \"testInput\": \"some-uuid\"}")
+                                .content("{\"experiences\": [" +
+                                        "{\"type\": \"fact\", \"description\": \"I am writing Java code\"}," +
+                                        "{\"type\": \"thought\", \"description\": \"This is quite cool\"}," +
+                                        "{\"type\": \"emotion\", \"description\": \"joy\"}" +
+                                        "]}")
                 )
                 .andExpect(status().isOk())
                 .andReturn();
@@ -43,6 +47,6 @@ public class CreateRecordIntegrationTest {
                         CreateRecordResponse.class
                 );
 
-        assertThat(response.getCreatedRecordId()).isEqualTo("some-uuid");
+        assertThat(response.getCreatedRecordId()).isEqualTo("|fact|thought|emotion|");
     }
 }
