@@ -8,8 +8,4 @@ public class CreateRecordRequest {
     public List<Experience> getExperiences() {
         return experiences;
     }
-
-    public void setExperiences(List<Experience> experiences) {
-        this.experiences = experiences;
-    }
 }
