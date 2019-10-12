@@ -3,9 +3,9 @@ package com.ibudasov.reflectje.application.request;
 import java.util.List;
 
 public class CreateRecordRequest {
-    private List<Experience> experiences;
+    private List<RequestedExperience> experiences;
 
-    public List<Experience> getExperiences() {
+    public List<RequestedExperience> getExperiences() {
         return experiences;
     }
 }

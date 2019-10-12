@@ -1,7 +1,7 @@
 package com.ibudasov.reflectje.infrastructure.controller;
 
 import com.ibudasov.reflectje.application.request.CreateRecordRequest;
-import com.ibudasov.reflectje.application.request.Experience;
+import com.ibudasov.reflectje.application.request.RequestedExperience;
 import com.ibudasov.reflectje.application.response.CreateRecordResponse;
 import com.ibudasov.reflectje.infrastructure.Uuid;
 import org.springframework.http.HttpStatus;
@@ -19,9 +19,9 @@ public class RecordController {
 
         StringBuilder response = new StringBuilder();
         response.append("|");
-        for (Experience experience : request.getExperiences()) {
+        for (RequestedExperience requestedExperience : request.getExperiences()) {
             response
-                    .append(experience.getType())
+                    .append(requestedExperience.getType())
                     .append('|')
             ;
         }

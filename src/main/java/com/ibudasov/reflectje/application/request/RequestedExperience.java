@@ -1,6 +1,6 @@
 package com.ibudasov.reflectje.application.request;
 
-public class Experience {
+public class RequestedExperience {
     private String type;
     private String description;
 
