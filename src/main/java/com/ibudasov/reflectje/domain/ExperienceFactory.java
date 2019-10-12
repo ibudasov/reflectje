@@ -1,7 +1,7 @@
 package com.ibudasov.reflectje.domain;
 
 public class ExperienceFactory {
-    public Experience createExperienceFromLiteralAndDescription(String literal, String description) throws Exception {
+    public Experience createExperienceFromLiteralAndDescription(String literal, String description) throws CantCreateExperience {
 
         if (literal.equals("fact")) {
             return new Fact(description);
@@ -15,6 +15,6 @@ public class ExperienceFactory {
             return new Emotion(description);
         }
 
-        throw new Exception(literal + " is not supported yet");
+        throw new CantCreateExperience(literal + " is not supported yet");
     }
 }

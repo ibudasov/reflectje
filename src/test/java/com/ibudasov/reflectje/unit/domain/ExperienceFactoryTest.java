@@ -60,7 +60,7 @@ public class ExperienceFactoryTest {
     public void whenTryingToCreateUnknownExperience_thenExceptionIsThrown() {
         assertThatThrownBy(
                 () -> (new ExperienceFactory()).createExperienceFromLiteralAndDescription("dream", "had a dream about new camera"))
-                .isInstanceOf(Exception.class)
+                .isInstanceOf(CantCreateExperience.class)
                 .hasMessageContaining("dream is not supported yet");
     }
 }
