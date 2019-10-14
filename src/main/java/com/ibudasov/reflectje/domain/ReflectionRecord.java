@@ -17,6 +17,7 @@ public class ReflectionRecord {
         this.id = id;
     }
 
+    // todo: investigate why and how here can be null
     public ArrayList<Experience> getExperiences() {
         return experiences;
     }
