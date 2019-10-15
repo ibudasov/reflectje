@@ -6,7 +6,7 @@
 A platform for doing reflection during studying psychology
 
 
-# 👍 How is it going to work
+# 💡 The idea
 As a student you suppose to do Reflection. 
 
 Reflection — writing down your life events, thoughts and emotions. 
