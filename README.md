@@ -20,6 +20,8 @@ Once records have been added, they suppose to be shown on private page, which is
 
 We are going to store very sensitive private data, so we have to think about encryption or other measures of guarding privacy.
 
+# 🚸 Roadmap
+
 # 🍿 We also would like to make some analysis
 Everyday day the student writes down the reflection and choose appropriate emotions. At the end of week Reflectje summarize given emotions and say how good is the emotional state of the student. 
 If it is good – Reflectje shows the  results «Keep it up», if it is bad – «You should work better» and indicate the days which led to bad emotions
