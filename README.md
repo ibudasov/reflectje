@@ -21,6 +21,17 @@ Once records have been added, they suppose to be shown on private page, which is
 We are going to store very sensitive private data, so we have to think about encryption or other measures of guarding privacy.
 
 # 🚸 Roadmap
+- ✅ endpoint for the index page
+- ✅ endpoint for swagger docs
+- 🚧 add the record
+- save records to a file storage (research needed)
+- add thread-safety
+- retrieve last 50 records
+- retrieve records by date
+- retrieve a record by ID
+- add authentication
+- use some database
+- make it GDPR-compliant 
 
 # 🍿 We also would like to make some analysis
 Everyday day the student writes down the reflection and choose appropriate emotions. At the end of week Reflectje summarize given emotions and say how good is the emotional state of the student. 
