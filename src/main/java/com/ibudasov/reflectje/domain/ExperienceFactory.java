@@ -1,6 +1,9 @@
 package com.ibudasov.reflectje.domain;
 
 public class ExperienceFactory {
+
+    // todo: this factory can be more sophisticating, but how?
+
     public Experience createExperienceFromLiteralAndDescription(String literal, String description) throws CantCreateExperience {
 
         if (literal.equals("fact")) {

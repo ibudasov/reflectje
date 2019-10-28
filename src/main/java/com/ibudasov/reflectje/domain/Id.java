@@ -6,7 +6,13 @@ public interface Id {
      */
     String toString();
 
+    /**
+     * There supposed to be a possibility to generate ID
+     */
     Id generate();
 
+    /**
+     * Also the possibility to specify the value of ID needed
+     */
     Id createFrom(String value);
 }
