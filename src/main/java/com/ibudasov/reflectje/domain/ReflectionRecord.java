@@ -7,8 +7,14 @@ public class ReflectionRecord {
 
     private Id id;
 
+    /**
+     * The moment when the recording is happening
+     */
     private LocalDate date;
 
+    /**
+     * All the available experiences
+     */
     private ArrayList<Experience> experiences;
 
     public ReflectionRecord(Id id, ArrayList<Experience> experiences) {
