@@ -2,5 +2,7 @@
 - hosts: localhost
   remote_user: root
   tasks:
-  - name: install Docker
-    echo: ok
+    - name: install Docker
+      command: apk add docker
+      become: yes
+      become_method: sudo
