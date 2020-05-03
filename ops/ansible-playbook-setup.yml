@@ -6,3 +6,7 @@
       command: apk add docker
       become: yes
       become_method: sudo
+    - name: run Docker daemon
+      command: service docker start
+      become: yes
+      become_method: sudo
