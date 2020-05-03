@@ -8,4 +8,4 @@ RUN git clone https://github.com/ibudasov/reflectje.git
 WORKDIR /reflectje
 
 RUN apk add maven
-RUN mvn site
+RUN mvn clean package
