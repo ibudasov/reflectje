@@ -8,3 +8,5 @@ RUN apk add git
 RUN git clone https://github.com/ibudasov/reflectje.git
 
 RUN apk add --no-cache openjdk8
+
+RUN apk add maven
