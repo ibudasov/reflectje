@@ -14,5 +14,9 @@ sudo docker build ./reflectje/ops -t reflectje
 sudo docker run -i -t reflectje /bin/sh
 -- run something in the container interactively (-i) and attached to terminal (-t)
 
+sudo docker run --publish 8000:8080 --detach --name running-reflectje reflectje
+-- run the container as specified in CMD
 
+sudo docker rm --force running-reflectje
+-- stop the container
 
