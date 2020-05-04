@@ -7,6 +7,9 @@ ansible localhost -m ping
 # install git
 sudo apk add git
 
+# this is how I gonna test my app locally
+sudo apk add lynx
+
 #  rm -rf ./reflectje
 # git clone https://github.com/ibudasov/reflectje.git
 
