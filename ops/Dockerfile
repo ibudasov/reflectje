@@ -1,4 +1,4 @@
-FROM openjdk:7-alpine
+FROM openjdk:8-alpine
 
 RUN apk add --no-cache openjdk8
 
