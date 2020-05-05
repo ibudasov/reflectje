@@ -2,11 +2,15 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: install Docker
+    - name: Install Docker
       command: apk add docker
       become: yes
       become_method: sudo
-    - name: run Docker daemon
+    - name: Run Docker daemon
       command: service docker start
+      become: yes
+      become_method: sudo
+    - name: Install Gradle
+      command: apk add gradle
       become: yes
       become_method: sudo
