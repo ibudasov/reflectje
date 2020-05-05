@@ -12,7 +12,3 @@
         state: started
       become: yes
       become_method: sudo
-    - name: Install Gradle
-      command: apk add gradle
-      become: yes
-      become_method: sudo
