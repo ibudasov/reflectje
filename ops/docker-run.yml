@@ -2,9 +2,14 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: Run the container at localhost:80. To test echo $(wget localhost -q -O -)
-      command: docker run --publish 80:8080 --detach --name running-reflectje reflectje
+    - name: (RE)Run reflectje container in detached mode with exposing localhost:80. Check it - echo $(wget localhost -q -O -)
+      docker_container:
+        name: running-reflectje
+        image: reflectje
+        ports:
+          - "80:8080"
+        detach: yes
+        restart: yes
       become: yes
       become_method: sudo
-
 
