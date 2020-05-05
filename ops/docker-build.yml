@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Build the application image named "reflectje"
+      docker_image:
+        path: ./
+        name: reflectje
+        tag: v1
+      become: yes
+      become_method: sudo
+
+

@@ -2,13 +2,6 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: Build an image and push it to a private repo
-      docker_image:
-        path: ./
-        name: reflectje
-        tag: v1
-      become: yes
-      become_method: sudo
     - name: Run the container at localhost:80. To test echo $(wget localhost -q -O -)
       command: docker run --publish 80:8080 --detach --name running-reflectje reflectje
       become: yes
