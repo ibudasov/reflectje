@@ -6,8 +6,10 @@
       command: apk add docker
       become: yes
       become_method: sudo
-    - name: Run Docker daemon
-      command: service docker start
+    - name: Start Docker daemon, if not started
+      service:
+        name: docker
+        state: started
       become: yes
       become_method: sudo
     - name: Install Gradle
