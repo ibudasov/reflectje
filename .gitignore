@@ -26,3 +26,4 @@
 .vscode/settings.json
 /ops/.vagrant
 /ops/kubectl
+/ops/kind

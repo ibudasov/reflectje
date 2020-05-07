@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Download kind
+      get_url:
+        url: https://kind.sigs.k8s.io/dl/v0.8.0/kind-Linux-amd64
+        dest: ./kind
+      become: yes
+      become_method: sudo
+    - name: Move the binary in to your PATH and make it executable
+      copy:
+        src: ./kind
+        dest: /usr/local/bin/kind
+        mode: a+x
+      become: yes
+      become_method: sudo
+#    - name: Let's check it!
+#      command: kubectl version --client

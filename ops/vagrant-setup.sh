@@ -15,3 +15,4 @@ sudo apk add lynx
 
 ansible-playbook reflectje/ops/vagrant-setup.yml
 ansible-playbook reflectje/ops/vagrant-setup-kubernetes.yml
+ansible-playbook reflectje/ops/vagrant-setup-kind.yml
