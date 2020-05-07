@@ -14,3 +14,4 @@ sudo apk add lynx
 # git clone https://github.com/ibudasov/reflectje.git
 
 ansible-playbook reflectje/ops/vagrant-setup.yml
+ansible-playbook reflectje/ops/vagrant-setup-kubernetes.yml
