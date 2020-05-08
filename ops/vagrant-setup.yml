@@ -12,3 +12,7 @@
         state: started
       become: yes
       become_method: sudo
+    - name: Make me Igor!
+      command: git config user.name "Igor Budasov"
+    - name: Make me Igor with email!
+      command: git config user.email "igor.budasov@gmail.com"
