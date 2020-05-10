@@ -1,5 +1,7 @@
 FROM whindes/alpine-minikube:22.3
 
+# docker run -ti --privileged forge sh
+
 RUN sudo apk update
 
 
