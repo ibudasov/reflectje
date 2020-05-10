@@ -19,7 +19,3 @@ sudo docker run --publish 8000:8080 --detach --name running-reflectje reflectje
 
 sudo docker rm --force running-reflectje
 -- stop the container
-
-sudo docker login
-sudo docker tag reflectje ibudasov/reflectje:0.1
-sudo docker push ibudasov/reflectje:0.1
