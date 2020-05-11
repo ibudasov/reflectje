@@ -1,8 +1,7 @@
 FROM whindes/alpine-minikube:22.3
 
-RUN sudo apk update
+RUN apk update
 
-RUN sudo apk add ansible
-RUN ansible localhost -m ping
+RUN apk add ansible
 
 CMD ["bash"]

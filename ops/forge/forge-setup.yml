@@ -2,14 +2,17 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: Install Python
-      command: apk add --no-cache --update python3
-      become: yes
-      become_method: sudo
-    - name: Install some python libs, which are needed for Ansible
-      command: pip3 install --upgrade pip setuptools wheel docker-py
-      become: yes
-      become_method: sudo
+    - name: Install Pip for installing python modules
+      command: apk add py-pip
+    - name: Install certain python modules for docker
+      pip:
+        name: "{{ item.name }}"
+        state: present
+      with_items:
+        - { name: docker }
+        - { name: docker-py}
+        - { name: setuptools}
+        - { name: wheel}
 #    - name: Make me Igor!
 #      command: git config user.name "Igor Budasov"
 #    - name: Make me Igor with email!

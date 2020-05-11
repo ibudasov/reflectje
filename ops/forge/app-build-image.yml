@@ -4,10 +4,8 @@
   tasks:
     - name: Build the application image named "reflectje"
       docker_image:
-        path: ./
+        path: ./../application/
         name: reflectje
-        tag: v1
-      become: yes
-      become_method: sudo
+        tag: latest
 
 

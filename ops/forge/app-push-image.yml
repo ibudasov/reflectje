@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: Logging into DockerHub TODO HIDE CREDENTIALS!
+      docker_login:
+        username: ibudasov
+        email: igor.budasov@gmail.com
+        password: dreams
+    - name: Add a generic tag (ibudasov/reflectje:latest)
+      command: docker tag reflectje ibudasov/reflectje:latest
+    - name: Push to ibudasov/reflectje
+      command: docker push ibudasov/reflectje:latest
+
