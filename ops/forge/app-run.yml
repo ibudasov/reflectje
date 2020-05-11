@@ -10,6 +10,4 @@
           - "80:8080"
         detach: yes
         restart: yes
-      become: yes
-      become_method: sudo
 
