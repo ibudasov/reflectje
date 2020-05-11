@@ -13,4 +13,11 @@
 
 `docker build ./ -t forge` — build the Forge
 `docker run -ti -v ~/Sites/reflectje:/reflectje --privileged forge sh` — get into the Forge with shared folder
+`ansible-playbook /reflectje/ops/forge/forge-setup.yml` — setup all what's needed in the Forge
+
+## Forging
+`ansible-playbook /reflectje/ops/forge/app-build-image.yml` — build the app
+`ansible-playbook /reflectje/ops/forge/app-run.yml` — run it
+`ansible-playbook /reflectje/ops/forge/app-stop.yml` — stop it
+`ansible-playbook /reflectje/ops/forge/app-push-image.yml` — push the image to dockerhub
 
