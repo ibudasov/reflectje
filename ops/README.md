@@ -32,12 +32,30 @@
 
 `ansible-playbook /reflectje/ops/forge/app-push-image.yml` — push the image to dockerhub
 
+## Setup
+
 `minicube start`
 
 `docker pull ibudasov/reflectje:0.1`
 
+## Deployment
+
 `kubectl create deployment hoi-reflectje --image=ibudasov/reflectje:0.1`
 
 `kubectl get deployments`
+
+`kubectl delete deployment hoi-reflectje`
+
+## Service
+
+`kubectl expose deployment hoi-reflectje --type=NodePort --port=8080` — create service. Make sure the port here matches the open port of your container
+
+`minikube service hoi-reflectje --url` — make your deployment running as a service with a URL
+
+`kubectl delete svc hoi-reflectje`  — delete service
+
+`minikube service list` — see the services list and their URLs
+
+`curl http://127.0.0.1:30000` — to test things
 
 `kubectl get pods`
