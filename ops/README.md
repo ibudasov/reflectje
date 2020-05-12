@@ -32,3 +32,12 @@
 
 `ansible-playbook /reflectje/ops/forge/app-push-image.yml` — push the image to dockerhub
 
+`minicube start`
+
+`docker pull ibudasov/reflectje:0.1`
+
+`kubectl create deployment hoi-reflectje --image=ibudasov/reflectje:0.1`
+
+`kubectl get deployments`
+
+`kubectl get pods`
