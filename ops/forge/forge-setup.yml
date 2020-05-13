@@ -20,4 +20,4 @@
 #    - name: Make me Igor!
 #      command: git config user.name "Igor Budasov"
 #    - name: Make me Igor with email!
-#      command: git confi˝g user.email "igor.budasov@gmail.com"
+#      command: git config user.email "igor.budasov@gmail.com"
