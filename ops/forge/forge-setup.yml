@@ -21,3 +21,5 @@
 #      command: git config user.name "Igor Budasov"
 #    - name: Make me Igor with email!
 #      command: git config user.email "igor.budasov@gmail.com"
+#    - name: Fix when github forgets ssh key
+#      command: ssh-add ~/.ssh/id_rsa
