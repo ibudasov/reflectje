@@ -22,6 +22,8 @@
 
 `ansible-playbook /reflectje/ops/forge/forge-setup.yml` — setup all what's needed in the Forge
 
+`minikube dashboard` — dashboard, run it when needed
+
 ## Forging
 
 `ansible-playbook /reflectje/ops/forge/app-build-image.yml` — build the app
