@@ -17,6 +17,8 @@
       command: minikube start
     - name: Pull reflectje image to have it locally awailable for k8s
       command: docker pull ibudasov/reflectje:0.1
+    - name: Install cURL
+      command: apk add curl
 #    - name: Make me Igor!
 #      command: git config user.name "Igor Budasov"
 #    - name: Make me Igor with email!
