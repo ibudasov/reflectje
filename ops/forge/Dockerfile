@@ -4,7 +4,7 @@ RUN apk update
 
 RUN apk add ansible
 
-# to get to k8s dashboard
-EXPOSE 30000
+# exposing k8s dashboard and reflectje
+EXPOSE 30000 8080
 
 CMD ["bash"]
