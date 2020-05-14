@@ -18,7 +18,7 @@
 
 `docker build ./ -t forge` — build the Forge
 
-`docker run -ti -v ~/Sites/reflectje:/reflectje --publish 30000:30000 --privileged forge sh` — get into the Forge with shared folder
+`docker run -ti -v ~/Sites/reflectje:/reflectje --publish 30000:30000 --publish 8080:8080 --privileged forge sh` — get into the Forge with shared folder
 
 `ansible-playbook /reflectje/ops/forge/forge-setup.yml` — setup all what's needed in the Forge
 
