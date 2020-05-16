@@ -2,7 +2,7 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: Stopping reflectje container. Check it - echo $(wget localhost -q -O -)
+    - name: Stopping reflectje container. Check it - "curl localhost"
       docker_container:
         name: running-reflectje
         state: stopped

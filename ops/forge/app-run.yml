@@ -2,7 +2,7 @@
 - hosts: localhost
   remote_user: root
   tasks:
-    - name: (RE)Run reflectje container in detached mode with exposing localhost:80. Check it - echo $(wget localhost -q -O -)
+    - name: (RE)Run reflectje container in detached mode with exposing localhost:80. Check it - "curl localhost"
       docker_container:
         name: running-reflectje
         image: reflectje
