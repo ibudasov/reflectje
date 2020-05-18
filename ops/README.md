@@ -50,7 +50,7 @@
 
 `kubectl delete svc hoi-reflectje`  — delete service
 
-`minikube service list` — see the services list and their URLs
+`minikube service list` & `kubectl get services` — see the services list and their URLs
 
 `curl http://127.0.0.1:30000` — to test things
 
