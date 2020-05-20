@@ -40,6 +40,8 @@
 
 `kubectl get deployments`
 
+`kubectl describe deployment`
+
 `kubectl delete deployment hoi-reflectje`
 
 ## Service
@@ -48,10 +50,38 @@
 
 `minikube service hoi-reflectje --url` — make your deployment running as a service with a URL
 
+`kubectl describe hoi-reflectje`
+
+`kubectl get services -l run=hoi-reflectje`
+
+`export NODE_PORT=$(kubectl get hoi-reflectje -o go-template='{{(index .spec.ports 0).nodePort}}') && echo NODE_PORT=$NODE_PORT`
+
 `kubectl delete svc hoi-reflectje`  — delete service
+
+`kubectl delete service -l run=hoi-reflectje` —also delete service, by the label 
 
 `minikube service list` & `kubectl get services` — see the services list and their URLs
 
-`curl http://127.0.0.1:30000` — to test things
+`curl http://127.0.0.1:30000` or `curl $(minikube ip):$NODE_PORT` — to test things
+
+## Pods
 
 `kubectl get pods`
+
+`kubectl get pods -l run=hoi-reflectje`
+
+`kubectl describe pods`
+
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')`
+
+`kubectl label pod $POD_NAME app=v1` — label the pod
+
+`curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/` — the output of the application
+
+`kubectl logs $POD_NAME` — get logs of the pod. It shows all the stdout of your app
+
+`kubectl exec $POD_NAME env` — run a command in a pod
+
+`kubectl exec -ti $POD_NAME bash` — get into the pod
+
+
