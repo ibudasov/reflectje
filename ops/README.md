@@ -36,29 +36,29 @@
 
 ## Deployment
 
-`kubectl create deployment hoi-reflectje --image=ibudasov/reflectje:0.1`
+`kubectl create deployment reflectje-deployment --image=ibudasov/reflectje:0.1`
 
 `kubectl get deployments`
 
 `kubectl describe deployment`
 
-`kubectl delete deployment hoi-reflectje`
+`kubectl delete deployment reflectje-deployment`
 
 ## Service
 
-`kubectl expose deployment hoi-reflectje --type=NodePort --port=8080` — create service. Make sure the port here matches the open port of your container
+`kubectl expose deployment reflectje-deployment --type=NodePort --port=8080` — create service. Make sure the port here matches the open port of your container
 
-`minikube service hoi-reflectje --url` — make your deployment running as a service with a URL
+`minikube service reflectje-deployment --url` — make your deployment running as a service with a URL
 
-`kubectl describe hoi-reflectje`
+`kubectl describe reflectje-deployment`
 
-`kubectl get services -l run=hoi-reflectje`
+`kubectl get services -l run=reflectje-deployment`
 
-`export NODE_PORT=$(kubectl get hoi-reflectje -o go-template='{{(index .spec.ports 0).nodePort}}') && echo NODE_PORT=$NODE_PORT`
+`export NODE_PORT=$(kubectl get reflectje-deployment -o go-template='{{(index .spec.ports 0).nodePort}}') && echo NODE_PORT=$NODE_PORT`
 
-`kubectl delete svc hoi-reflectje`  — delete service
+`kubectl delete svc reflectje-deployment`  — delete service
 
-`kubectl delete service -l run=hoi-reflectje` —also delete service, by the label 
+`kubectl delete service -l run=reflectje-deployment` —also delete service, by the label 
 
 `minikube service list` & `kubectl get services` — see the services list and their URLs
 
@@ -68,7 +68,7 @@
 
 `kubectl get pods`
 
-`kubectl get pods -l run=hoi-reflectje`
+`kubectl get pods -l run=reflectje-deployment`
 
 `kubectl describe pods`
 
