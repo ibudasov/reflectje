@@ -84,4 +84,24 @@
 
 `kubectl exec -ti $POD_NAME bash` — get into the pod
 
+## Replica sets
 
+`kubectl get rs` — get known replica sets
+
+`kubectl scale deployments/reflectje-deployment --replicas=3` — scale it!
+
+`kubectl get pods -o wide` — check the pods with IPs and nodes info
+
+`kubectl describe deployments/reflectje-deployment`
+
+`curl $(minikube ip):$NODE_PORT` — now, after scaling up, each request is executed in a different node 
+
+## Rolling updates
+
+`kubectl set image deployments/reflectje-deployment reflectje=ibudasov/reflectje:0.2` — this is how you release a new version of your app in the new container
+
+`kubectl rollout status deployments/reflectje-deployment` — the status of deployment
+
+`kubectl describe pods` — here you should see the new version of the container
+
+`kubectl rollout undo deployments/reflectje-deployment` — roll it back when troubles
