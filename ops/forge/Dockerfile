@@ -7,4 +7,6 @@ RUN apk add ansible
 # exposing k8s dashboard and reflectje
 EXPOSE 30000 8080
 
-CMD ["bash"]
+RUN echo 'export PS1="\e[0;36m[\u🚀\h \w]\$ \e[m "' >> /etc/profile
+
+CMD ["sh"]
