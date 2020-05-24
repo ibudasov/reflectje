@@ -44,6 +44,8 @@
 
 `kubectl delete deployment reflectje-deployment`
 
+`kubectl apply -f /reflectje/ops/application/deployment.yaml`
+
 ## Service
 
 `kubectl expose deployment reflectje-deployment --type=NodePort --port=8080` — create service. Make sure the port here matches the open port of your container
