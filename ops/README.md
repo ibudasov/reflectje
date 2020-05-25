@@ -44,8 +44,6 @@
 
 `kubectl delete deployment reflectje-deployment`
 
-`kubectl apply -f /reflectje/ops/application/deployment.yaml`
-
 ## Service
 
 `kubectl expose deployment reflectje-deployment --type=NodePort --port=8080` — create service. Make sure the port here matches the open port of your container
@@ -86,9 +84,9 @@
 
 `kubectl exec -ti $POD_NAME bash` — get into the pod
 
-## Replica sets
+## Kluster
 
-`kubectl get rs` — get known replica sets
+`kubectl get rs` or `kubectl get replicasets` — get known replica sets
 
 `kubectl scale deployments/reflectje-deployment --replicas=3` — scale it!
 
@@ -96,7 +94,11 @@
 
 `kubectl describe deployments/reflectje-deployment`
 
-`curl $(minikube ip):$NODE_PORT` — now, after scaling up, each request is executed in a different node 
+`curl $(minikube ip):$NODE_PORT` — now, after scaling up, each request is executed in a different node
+
+`kubectl apply -f /reflectje/ops/application/deployment.yaml`
+
+`kubectl expose deployments/reflectje-cluster --type=LoadBalancer --name=reflectje-service` — once cluster is created, it can be exposed
 
 ## Rolling updates
 
