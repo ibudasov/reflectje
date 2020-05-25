@@ -1,8 +1,6 @@
 ---
 - hosts: localhost
   remote_user: root
-  environment:
-    PS1: "\e[0;36m[\u- \h \w]\$ \e[m "
   tasks:
     - name: Install Pip for installing python modules
       command: apk add py-pip
@@ -21,10 +19,6 @@
       command: docker pull ibudasov/reflectje:0.1
     - name: Install cURL
       command: apk add curl
-    - name: Making commmand prompt pretty
-      shell: "export PS1=$PS1"
-      environment:
-        PS1: \e[0;36m[\u \h \w]\$ \e[m
 #    - name: Make the prompt pretty for the future
 #      command: echo 'export PS1="\e[0;36m[\u - \h \w]\$ \e[m "' >> ~/.bashrc
 #    - name: Make me Igor!
