@@ -2,17 +2,19 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: load-balancer
+    purpose: cluster-with-load-balancer
+    version: "0.1"
+    stage: dev
   name: reflectje-cluster
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app.kubernetes.io/name: load-balancer
+      purpose: cluster-with-load-balancer
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: load-balancer
+        purpose: cluster-with-load-balancer
     spec:
       containers:
         - image: ibudasov/reflectje:0.1
