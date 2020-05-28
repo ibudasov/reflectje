@@ -3,7 +3,7 @@
   remote_user: root
   tasks:
     - name: Install some tools for development
-      command: apk add py-pip git make
+      command: apk add py-pip git
     - name: Install certain python modules for docker
       pip:
         name: "{{ item.name }}"
