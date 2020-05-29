@@ -16,11 +16,11 @@
 
 # ⚔️ The Forge `cd reflectje/ops/forge`
 
-`docker build ./ -t forge` — build the Forge
+`make build` — build the Forge
 
-`docker run -ti -v ~/Sites/reflectje:/reflectje --publish 30000:30000 --publish 8080:8080 --privileged forge sh` — get into the Forge with shared folder
+`make up` — get into the Forge with shared folder
 
-`ansible-playbook /reflectje/ops/forge/forge-setup.yml` — setup all what's needed in the Forge
+`make install` — setup all what's needed in the Forge
 
 `minikube dashboard` — dashboard, run it when needed, It's available at http://localhost:30000
 
