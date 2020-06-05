@@ -109,3 +109,5 @@
 `kubectl describe pods` — here you should see the new version of the container
 
 `kubectl rollout undo deployments/reflectje-deployment` — roll it back when troubles
+
+![this is my life](ops/k8s.jpg)
