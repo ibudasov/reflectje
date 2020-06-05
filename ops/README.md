@@ -110,4 +110,4 @@
 
 `kubectl rollout undo deployments/reflectje-deployment` — roll it back when troubles
 
-![this is my life](ops/k8s.jpg)
+![this is my life](k8s.jpg)
